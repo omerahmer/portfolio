@@ -1,0 +1,31 @@
+
+.nav-item:hover {
+  background-color:#38A2E1;
+}
+
+h1, h3{
+  text-align: center;
+}
+.thumbnail {
+  padding: 10px;
+  margin-right: 30px;
+}
+
+.row {
+  display: inline;
+}
+
+img {
+    padding-bottom: 15px;
+}
+
+.main {
+    height: 280px;
+}
+.aboutme {
+  margin-right: 170px;
+}
+
+.idpic {
+  margin-left: 170px;
+}
