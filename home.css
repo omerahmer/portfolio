@@ -1,0 +1,20 @@
+
+.nav-item:hover {
+  background-color:#38A2E1;
+}
+
+.column {
+  width: 50%;
+}
+
+header {
+  border-bottom: solid 2px gray;
+}
+
+.thumbnail {
+  display: inline;
+}
+
+.card {
+  margin-bottom: 35px;
+}
