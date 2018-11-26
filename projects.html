@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
+   <head>
     <link rel="stylesheet" href="bootstrap-4.1.2-dist/css/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="home.css" type="text/css" />
+    <link rel="stylesheet" href="projects.css" type="text/css" />
   </head>
-  <body>
-    <!--Header section -->
+  <!--Header section -->
     <header>
       <div class="container">
         <nav class="nav nav-pills nav-justified">
-          <a class="nav-item nav-link active" href="index.html">Home</a>
+          <a class="nav-item nav-link" href="index.html">Home</a>
           <a class="nav-item nav-link" href="Ahmer_AboutMe.html">About Me</a>
           <a class="nav-item nav-link" href="resume.html">Resume</a>
-          <a class="nav-item nav-link" href="projects.html">Projects</a>
+          <a class="nav-item nav-link active" href="projects.html">Projects</a>
           <a class="nav-item nav-link" href="contact.html">Contact Me</a>
         </nav>
       </div>
     </header>
-    <!-- Main content -->
-    <div class="jumbotron">
-      <h1>Omer Ahmer's Engineering Portfolio</h1>
-      <p>My name is Omer Ahmer and I am an aspiring software engineer.</p>
-      <a href="Ahmer_AboutMe.html">Continue reading...</a>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+    
+    <div class="col-sm-12">
         <div class="card flex-sm-row">
           <div class="card-body">
             <h2>Projects</h2>
@@ -34,17 +27,28 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-12">
         <div class="card flex-sm-row">
           <div class="card-body">
             <h2>Projects</h2>
             <h5 class="card-title">App Inventor Project</h5>
-            <p class="card-text">This App Inventor Project was created by me and my partner Riya.</p>
-            <a href="projects.html" class="btn btn-primary">Continue reading</a>
+            <p class="card-text">This App Inventor Project was created by me and my partner Riya.
+            For this project, we had to take an App Inventor original tutorial and modify it to make it our own.
+            We chose to do Mole Mash, since there were many things we could change. For our beta version, we added
+            a pause, play, and reset button. We also added a mole which you were not supposed to touch, which was 
+            Mr. Brown. We had a few bugs, such as the moles overlapping and the play button refusing to work. We
+            got feedback from our friends, and they said we had to fix the bugs and add some more of our own things
+            to make it more unique. To do that, we also added a slower and faster button so the moles move at different
+            speeds. Also, we got rid of the fixed holes so that the moles could move freely on the screen and would
+            never overlap.
+            </p>
+            <img class="card-img-right" style="max-width:250px; max-height:250px" src="images/appinventor.jpg" alt="App Inventor card image">
           </div>
         </div>
       </div>
-    </div>
+      </div>
+      
     <!-- Footer section -->
     <div class="jumbotron">
       <footer class="container">
@@ -67,5 +71,4 @@
         </div>
       </footer>
     </div>
-  </body>
 </html>
