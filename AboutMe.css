@@ -1,7 +1,19 @@
 .nav-item:hover {
-  background-color:#38A2E1;
+  background-color: darkgreen;
 }
 
 header {
   border-bottom: solid 1.5px gray;
+}
+
+.active {
+  background-color: green !important;
+}
+
+a:hover {
+  color: black;
+}
+
+.btn {
+  background-color: green !important;
 }
