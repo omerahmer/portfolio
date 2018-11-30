@@ -29,3 +29,13 @@ a:hover {
 .light {
   font-weight: lighter;
 }
+
+h3 {
+  margin: 10px;
+  color: #00a400;
+}
+
+#jumbotron {
+  background-image: url("images/resume.jpg");
+  color: white;
+}

@@ -26,3 +26,8 @@ a:hover {
 .btn {
   background-color: green !important;
 }
+
+#jumbotron {
+  background-image: url("images/projects.jpg");
+  color: white;
+}
