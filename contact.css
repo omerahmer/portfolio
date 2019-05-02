@@ -8,6 +8,7 @@
 
 h1 {
   padding-bottom: 30px;
+  color: white;
 }
 
 header {
@@ -26,5 +27,6 @@ a:hover {
   background-color: green !important;
 }
 #jumbotron {
-  background-image: url("images/contact.jpg");
+  background-image: url("images/repeat.png");
+  width: 100%;
 }
