@@ -28,3 +28,7 @@ a:hover {
   background-image: url("images/codingpreview.jpg");
   color:white;
 }
+
+.text-white:hover {
+  color: black;
+}
