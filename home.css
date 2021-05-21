@@ -1,0 +1,34 @@
+.nav-item:hover {
+  background-color: darkgreen;
+}
+
+.card {
+  margin-bottom: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+header {
+  border-bottom: solid 1.5px gray;
+}
+
+.active {
+  background-color: green !important;
+}
+
+a:hover {
+  color: black;
+}
+
+.btn {
+  background-color: green !important;
+}
+
+#jumbotron {
+  background-image: url("images/codingpreview.jpg");
+  color:white;
+}
+
+.text-white:hover {
+  color: black;
+}

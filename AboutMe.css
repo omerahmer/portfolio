@@ -1,0 +1,24 @@
+.nav-item:hover {
+  background-color: darkgreen;
+}
+
+header {
+  border-bottom: solid 1.5px gray;
+}
+
+.active {
+  background-color: green !important;
+}
+
+a:hover {
+  color: black;
+}
+
+.btn {
+  background-color: green !important;
+}
+
+#jumbotron {
+  background-image:url("images/aboutme.jpg");
+  color: white;
+}
