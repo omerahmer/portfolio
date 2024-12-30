@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
@@ -164,7 +164,4 @@ export function CustomDock() {
     );
 }
 
-export default CustomDock;
-
-
-
+export default CustomDock;*/

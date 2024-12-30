@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 
 import { cva, type VariantProps } from "class-variance-authority";
 import {
@@ -172,3 +172,4 @@ const DockIcon = ({
 DockIcon.displayName = "DockIcon";
 
 export { Dock, DockIcon, dockVariants };
+*/
