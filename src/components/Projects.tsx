@@ -1,5 +1,8 @@
+"use client"
+
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { useState, useEffect } from "react";
 
 interface Project {
     title: string;
@@ -19,14 +22,6 @@ const projectsData: Project[] = [
         preview: "videos/nanotech.mp4",
         tech: ["React", "TypeScript", "Tailwind CSS", "MongoDB", "Express"]
     },
-    /*{
-        title: "Einzel Lens Simulator",
-        description: "An application that simulates the Einzel lens mechanism used in cutting-edge electron-beam lithography.",
-        link: "https://nanotech.onrender.com",
-        code: "https://github.com/omerahmer/physics_simulations",
-        preview: "",
-        tech: ["Python", "Flask", "Matplotlib", "JavaScript", "React"]
-    },*/
     {
         title: "In The Mood",
         description: "A website that creates a custom Spotify playlist based on the user's mood.",
@@ -35,24 +30,44 @@ const projectsData: Project[] = [
         preview: "videos/inthemood.mp4",
         tech: ["TypeScript", "Express", "Spotify Web API", "HTML", "CSS"]
     },
-    /*{
+    {
         title: "Weather",
         description: "A full-stack weather app. Work in progress.",
-        link: "https://www.w3.org/Provider/Style/dummy.html",
-        code: "https://www.w3.org/Provider/Style/dummy.html",
-        preview: "",
-        tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Clerk", "Zustand"]
-    }*/
+        link: "https://weather-drab-kappa.vercel.app/",
+        code: "https://github.com/omerahmer/weather",
+        preview: "videos/weather.mp4",
+        tech: ["Next.js", "React", "TypeScript", "Clerk", "Zustand", "Zod", "REST APIs"]
+    },
 ]
 
 const Projects = () => {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        handleResize(); // Check on initial render
+        window.addEventListener("resize", handleResize); // Update on resize
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <div className="flex flex-col gap-4">
             <h1 className="font-bold text-2xl">Projects</h1>
             <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
                 {projectsData.map((item, index) => (
                     <div key={index} className="flex flex-col border border-gray-100 dark:border-gray-800 rounded-lg">
-                        <video src={item.preview} autoPlay muted loop className="w-full h-full" />
+                        <video
+                            src={item.preview}
+                            autoPlay={!isMobile}
+                            muted
+                            loop
+                            className="w-full h-full"
+                        />
                         <div className="flex flex-col gap-3 p-4">
                             <h2 className="text-lg font-bold">{item.title}</h2>
                             <p className="text-slate-800 dark:text-slate-300 text-base">{item.description}</p>
