@@ -9,7 +9,7 @@ const Intro = () => {
                 <p className="text-md text-slate-500 dark:text-slate-300">I am a student at UC Irvine pursuing a degree in Software Engineering. I excel in building full-stack applications from scratch with React, TypeScript, Next.js, and other new technologies. My experience spans across frontend, backend, and DevOps, and I have a particular passion for security and performance.</p>
             </div>
             <div className="md:w-3/12 flex-1 sm:w-full">
-                <Image src="/images/omer.png" alt="omer" height={120} width={120} className="rounded-full border border-gray-300 dark:border-gray-800 h-36 w-36" />
+                <Image src="/images/omer.jpeg" alt="omer" height={120} width={120} className="rounded-full border border-gray-300 dark:border-gray-800 h-36 w-36" />
             </div>
         </div>
     );
