@@ -238,7 +238,7 @@ export default function Portfolio() {
           <span>UC Irvine</span><i />
           <span>Software Engineering</span><i />
           <span>AWS Certified</span><i />
-          <span>Full-stack · DevOps · Performance</span>
+          <span>Full-stack · DevOps · Cloud</span>
         </div>
 
         <section id="about" className="page-section" aria-labelledby="about-title">
