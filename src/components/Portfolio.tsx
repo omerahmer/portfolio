@@ -12,7 +12,7 @@ const jobs = [
     company: "TAMS — Travel & Meeting Society",
     role: "Backend Engineer",
     location: "Remote",
-    summary: "Built an auditable multi-agent hotel procurement pipeline backed by Python, FastAPI, PostgreSQL, and structured analytics.",
+    summary: "Built an auditable multi-agent hotel procurement pipeline backed by Python, FastAPI, PostgreSQL, and structured analytics. We presented the system at the TAMS conference at Harvard University to an audience that included teams from Kayak, Navan, IrisAI, and other major travel companies.",
     outcomes: [
       { value: "2 weeks", label: "RFP lifecycle, down from 6–12 months" },
       { value: "10k–50k", label: "spend-data rows analyzed per cycle" },
@@ -58,12 +58,11 @@ const projects = [
     category: "LLM tooling · Developer infrastructure",
     description: "A prompt-versioning and selective evaluation system that treats LLM prompt changes like schema migrations.",
     tech: "Rust · PostgreSQL/pgvector · sqlx · OpenAI API · Next.js · TypeScript · GitHub Actions",
-    details: [
-      "Built a CLI that diffs prompt changes and uses embedding similarity to identify potentially affected evaluation cases.",
-      "Shipped a dashboard for the prompt registry, structural diffs, evaluation runs, and a live precision/recall curve.",
-      "Designed a ground-truth validation pipeline with full regression suites, an LLM judge, and threshold-sweep measurement.",
-      "Built a GitHub Action that runs selected evaluations on pull requests and posts a pass/fail gating comment.",
-    ],
+    demo: "/videos/Driftguard.mp4",
+    href: "https://github.com/omerahmer/Driftguard",
+    linkLabel: "View on GitHub",
+    linkDetail: "omerahmer/Driftguard",
+    linkType: "github",
     flow: ["Prompt diff", "Similarity selector", "Targeted evals", "PR gate"],
   },
   {
@@ -72,12 +71,11 @@ const projects = [
     category: "AI infrastructure · Cloud architecture",
     description: "A visual, AI-powered AWS infrastructure designer that generates, validates, and remediates Terraform configurations.",
     tech: "React · TypeScript · Go · Python · LangGraph · Anthropic API",
-    details: [
-      "Built a React Flow canvas with schema-driven configuration, validated connections, live cost estimates, and Supabase project storage.",
-      "Added Claude-powered Terraform generation with Monaco preview and export.",
-      "Architected Go and FastAPI services with LangGraph agents for HCL generation, Terraform validation, and an automated remediation loop.",
-      "Developed a review agent combining deterministic security and reliability checks with structured LLM analysis.",
-    ],
+    demo: "/videos/terrarium.mp4",
+    href: "https://terrarium-fawn.vercel.app/",
+    linkLabel: "Open live project",
+    linkDetail: "terrarium-fawn.vercel.app",
+    linkType: "live",
     flow: ["Visual canvas", "HCL generation", "Validation", "Remediation"],
   },
 ];
@@ -238,26 +236,26 @@ export default function Portfolio() {
           <span>UC Irvine</span><i />
           <span>Software Engineering</span><i />
           <span>AWS Certified</span><i />
-          <span>Full-stack · DevOps · Cloud</span>
+          <span>Full-stack · DevOps · Cloud · Agentic AI</span>
         </div>
 
         <section id="about" className="page-section" aria-labelledby="about-title">
           <div className="section-heading reveal">
             <p className="section-number">01 / About</p>
-            <h2 id="about-title">Engineering with<br /><em>range and intent.</em></h2>
+            <h2 id="about-title">A bit about<br /><em>what I do.</em></h2>
           </div>
           <div className="about-panel window-panel reveal">
             <WindowBar label="Profile / Background" />
             <div className="about-grid">
               <div className="about-copy">
                 <div>
-                  <p className="eyebrow">01 — Practice</p>
-                  <p className="lead">I’m a software engineer who builds backend systems, cloud infrastructure, and full-stack products from first principles through production.</p>
+                  <p className="eyebrow">01 — Work</p>
+                  <p className="lead">I’m a software engineer. Most of my work is backend and cloud infrastructure, and lately a lot of it has been building systems that use AI agents to make applications more reliable and to show their work, so you can see why they landed where they did.</p>
                 </div>
                 <div className="about-columns">
                   <div>
-                    <p className="eyebrow">02 — Focus</p>
-                    <p>My work spans TypeScript, Go, Python, React, Next.js, FastAPI, PostgreSQL, AWS, Terraform, Docker, and Kubernetes—with a focus on reliable automation and explainable systems.</p>
+                    <p className="eyebrow">02 — Tools</p>
+                    <p>I mostly write TypeScript, Go, and Python. React and Next.js on the front end, FastAPI and PostgreSQL behind it, and AWS, Terraform, Docker, and Kubernetes to get it deployed. I also build agentic systems with LangGraph and the Anthropic API.</p>
                   </div>
                   <div>
                     <p className="eyebrow">03 — Education</p>
@@ -266,8 +264,8 @@ export default function Portfolio() {
                 </div>
                 <div className="credentials">
                   <p className="eyebrow">AWS credentials</p>
-                  <a href="https://www.credly.com/badges/eb6db03a-301d-4d19-a5e7-8d6cfc8a93e1?source=linked_in_profile" target="_blank" rel="noreferrer">Solutions Architect — Associate <ArrowUpRight /></a>
-                  <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/d49f84b9ffdf403aaa66de023b40d0b0" target="_blank" rel="noreferrer">DevOps Engineer — Professional <ArrowUpRight /></a>
+                  <a href="https://www.credly.com/badges/eb6db03a-301d-4d19-a5e7-8d6cfc8a93e1?source=linked_in_profile" target="_blank" rel="noreferrer">AWS Certified Solutions Architect — Associate <ArrowUpRight /></a>
+                  <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/d49f84b9ffdf403aaa66de023b40d0b0" target="_blank" rel="noreferrer">AWS Certified DevOps Engineer — Professional <ArrowUpRight /></a>
                 </div>
               </div>
             </div>
@@ -277,7 +275,7 @@ export default function Portfolio() {
         <section id="work" className="page-section" aria-labelledby="work-title">
           <div className="section-heading reveal">
             <p className="section-number">02 / Work</p>
-            <h2 id="work-title">Selected<br /><em>experience.</em></h2>
+            <h2 id="work-title">Where I’ve<br /><em>worked.</em></h2>
           </div>
           <article className="featured-work window-panel reveal">
             <WindowBar label={`Featured role / ${jobs[0].dates}`} />
@@ -290,15 +288,18 @@ export default function Portfolio() {
                   {jobs[0].details.map((detail) => <li key={detail}>{detail}</li>)}
                 </ul>
               </div>
-              <div className="work-system" aria-label="TAMS multi-agent pipeline">
-                <Image src="/images/logos/affiliation.png" alt="Travel and Meeting Society logo" width={112} height={112} />
-                <div className="system-flow">
-                  {["Discovery", "Evaluation", "Pricing", "Explanation"].map((stage, index) => (
-                    <div key={stage}><span>0{index + 1}</span>{stage}</div>
-                  ))}
-                </div>
-                <p>Auditable decision traces · Python / FastAPI · Pydantic · PostgreSQL</p>
-              </div>
+              <figure className="work-photo">
+                <Image
+                  src="/images/tams_conference.png"
+                  alt="Syed Omer Ahmer presenting the TAMS procurement system at Harvard University"
+                  fill
+                  sizes="(max-width: 800px) 100vw, 46vw"
+                />
+                <figcaption>
+                  <span>TAMS Ignite 2026</span>
+                  Presenting at Harvard University · Cambridge, MA
+                </figcaption>
+              </figure>
             </div>
             <div className="outcomes" aria-label="Measured outcomes">
               {jobs[0].outcomes?.map((outcome) => <div key={outcome.value}><strong>{outcome.value}</strong><span>{outcome.label}</span></div>)}
@@ -322,25 +323,55 @@ export default function Portfolio() {
         <section id="projects" className="page-section" aria-labelledby="projects-title">
           <div className="section-heading reveal">
             <p className="section-number">03 / Projects</p>
-            <h2 id="projects-title">Built to be<br /><em>used.</em></h2>
+            <h2 id="projects-title">Things I’ve<br /><em>built.</em></h2>
           </div>
           <div className="project-list">
             {projects.map((project, index) => (
               <article className="project-panel reveal" key={project.title}>
+                <div className="project-demo" aria-label={`${project.title} product demo`}>
+                  <div className="project-demo-bar">
+                    <span>0{index + 1} / Product demo</span>
+                    <span>{project.demo ? "Playing · Muted" : "Recording pending"}</span>
+                  </div>
+                  <div className="project-demo-stage">
+                    {project.demo ? (
+                      <video
+                        src={project.demo}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        controls
+                        preload="metadata"
+                        aria-label={`${project.title} interface walkthrough`}
+                      />
+                    ) : (
+                      <div className="project-demo-empty">
+                        <span>Demo / 01</span>
+                        <strong>Driftguard walkthrough</strong>
+                        <p>Add <code>public/videos/driftguard.mp4</code> to activate this frame.</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
                 <div className="project-meta">
                   <p className="eyebrow">0{index + 1} / {project.category} · {project.date}</p>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
+                  <a className="project-link" href={project.href} target="_blank" rel="noreferrer">
+                    <span className="project-link-icon" aria-hidden="true">
+                      {project.linkType === "github" ? <Github /> : <ArrowUpRight />}
+                    </span>
+                    <span><strong>{project.linkLabel}</strong><small>{project.linkDetail}</small></span>
+                    <ArrowUpRight className="project-link-arrow" aria-hidden="true" />
+                  </a>
                   <span>{project.tech}</span>
-                  <ul className="project-details">
-                    {project.details.map((detail) => <li key={detail}>{detail}</li>)}
-                  </ul>
-                </div>
-                <div className="project-preview project-flow" aria-label={`${project.title} system flow`}>
-                  <p>{project.title} / System flow</p>
-                  {project.flow.map((stage, stageIndex) => (
-                    <div key={stage}><span>0{stageIndex + 1}</span><strong>{stage}</strong></div>
-                  ))}
+                  <div className="project-flow" aria-label={`${project.title} system flow`}>
+                    <p>{project.title} / System flow</p>
+                    {project.flow.map((stage, stageIndex) => (
+                      <div key={stage}><span>0{stageIndex + 1}</span><strong>{stage}</strong></div>
+                    ))}
+                  </div>
                 </div>
               </article>
             ))}
